@@ -46,9 +46,7 @@ try:
     # S3 Upload
     s3 = boto3.client(
     's3',
-    aws_access_key_id='AKIAV6CSNR3DRDZR7VR3',
-    aws_secret_access_key='XRKAk6PTesLkMa7sCoB20hO8c0ZXEdjE7wC4OuiR',
-    region_name='us-east-1'  # change if your bucket is in a different region
+
 )
 
     bucket = 'rawbts3'
