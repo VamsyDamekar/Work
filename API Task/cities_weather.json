@@ -1,0 +1,14 @@
+{
+    "New York": {
+        "temperature_C": 26.03,
+        "weather": "few clouds"
+    },
+    "Los Angeles": {
+        "temperature_C": 25.26,
+        "weather": "clear sky"
+    },
+    "Chicago": {
+        "temperature_C": 22.84,
+        "weather": "clear sky"
+    }
+}
