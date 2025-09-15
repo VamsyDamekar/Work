@@ -1,62 +1,32 @@
-Part A – Open-Meteo (No Auth)
+Problem Statement: 
 
-Description:
+A real-time pipeline that collects external weather data from public APIs, processes and filters it, and stores the refined data for 
+analytics and alerting. I designed and implemented this to demonstrate proper error handling, secure API key usage, and standardized data 
+storage for multiple weather sources.
 
-Fetches hourly temperature and humidity for a given location.
+Target State: 
 
-Saves the data as openmeteo_weather.csv.
+The goal is to design and implement a fully automated data pipeline that ingests weather data from Open-Meteo, OpenWeatherMap, 
+and the National Weather Service, transforms it, and stores it in a structured format for analysis, testing both normal and erroneous scenarios.
 
-Finds maximum and minimum temperatures for the next 3 days and the time they occur.
+Project Overview: 
 
-Demonstrates error handling when a parameter is misspelled.
-Outputs:
+This project demonstrates an end-to-end pipeline that fetches hourly temperature and humidity from Open-Meteo, current weather for multiple 
+cities from OpenWeatherMap, and forecast data from the National Weather Service. It saves Open-Meteo data as a CSV and computes maximum and 
+minimum temperatures for the next three days while demonstrating error handling for misspelled parameters. OpenWeatherMap results are 
+stored as JSON, with secure API key usage, tests for invalid keys, and comparison between metric and imperial units. 
+National Weather Service data is saved as JSON, requiring a custom User-Agent header, with demonstrations of what happens when the header 
+is missing. The pipeline outputs both structured files and terminal logs for insights, error handling, and verification of data correctness.
 
-CSV: openmeteo_weather.csv
+Architecture: 
 
-Terminal prints: max/min temperatures and error handling demo
+Part A (Open-Meteo): Fetches hourly temperature and humidity, saves openmeteo_weather.csv, computes max/min temperatures, and demonstrates 
+error handling for invalid parameters. 
+Part B (OpenWeatherMap): Fetches current weather for multiple cities, stores API key securely in .env, 
+saves results as openweather_cities.json, tests invalid API keys, and compares metric vs imperial units. 
+Part D (National Weather Service): Fetches forecast data for a location, requires a custom User-Agent header, saves results 
+as nws_forecast.json, and demonstrates missing header behavior.
 
-Error Handling Example:
-
-Misspelled parameter temprature_2m
-
-Status Code: 400
-
-Message: "Invalid variable: temprature_2m"
-
-Part B – OpenWeatherMap (API Key / OAuth)
-
-Description:
-
-Fetches current weather for multiple cities.
-
-Stores API key securely in .env using python-dotenv.
-
-Saves the results as openweather_cities.json.
-
-Tests invalid API key.
-
-Compares metric vs imperial units.
-
-Outputs:
-
-JSON: openweather_cities.json
-
-Terminal prints: weather data, invalid API key test, hottest/coldest city
-
-Part D – National Weather Service (NWS)
-
-Description:
-
-Fetches forecast data from the NWS API for a given location.
-
-Requires a custom User-Agent header in all requests.
-
-Saves the forecast as nws_forecast.json.
-
-Demonstrates what happens if the User-Agent header is missing.
-
-Outputs:
-
-JSON: nws_forecast.json
-
-Terminal prints: forecast URL, missing User-Agent test (status code + snippet)
+Outputs: Open-Meteo CSV (openmeteo_weather.csv) and terminal prints for max/min temperatures and error handling. 
+OpenWeatherMap JSON (openweather_cities.json) and terminal prints for weather data, invalid API key tests, and hottest/coldest city. 
+National Weather Service JSON (nws_forecast.json) and terminal prints for forecast URL and missing User-Agent test (status code + snippet)
