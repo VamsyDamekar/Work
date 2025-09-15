@@ -5,8 +5,8 @@ import io
 # Create S3 client
 s3 = boto3.client('s3')
 
-# === Read from rawbt ===
-bucket_in = 'rawbt'
+# === Read from stagingbt ===
+bucket_in = 'stagingbt'
 key_in = 'salaries.csv'
 
 response = s3.get_object(Bucket=bucket_in, Key=key_in)
@@ -16,9 +16,9 @@ df = pd.read_csv(io.BytesIO(response['Body'].read()))
 df.columns = [col.strip().lower().replace(" ", "_") for col in df.columns]
 df = df[df['employment_type'] == 'FT'].drop_duplicates()
 
-# === Write to stagingbt ===
-bucket_out = 'stagingbt'
-key_out = 'salaries_stage1.csv'
+# === Write to curatedbt ===
+bucket_out = 'curatedbt'
+key_out = 'salaries_summary.csv'
 
 csv_buffer = io.StringIO()
 df.to_csv(csv_buffer, index=False)
