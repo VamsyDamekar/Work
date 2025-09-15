@@ -1,0 +1,62 @@
+Part A – Open-Meteo (No Auth)
+
+Description:
+
+Fetches hourly temperature and humidity for a given location.
+
+Saves the data as openmeteo_weather.csv.
+
+Finds maximum and minimum temperatures for the next 3 days and the time they occur.
+
+Demonstrates error handling when a parameter is misspelled.
+Outputs:
+
+CSV: openmeteo_weather.csv
+
+Terminal prints: max/min temperatures and error handling demo
+
+Error Handling Example:
+
+Misspelled parameter temprature_2m
+
+Status Code: 400
+
+Message: "Invalid variable: temprature_2m"
+
+Part B – OpenWeatherMap (API Key / OAuth)
+
+Description:
+
+Fetches current weather for multiple cities.
+
+Stores API key securely in .env using python-dotenv.
+
+Saves the results as openweather_cities.json.
+
+Tests invalid API key.
+
+Compares metric vs imperial units.
+
+Outputs:
+
+JSON: openweather_cities.json
+
+Terminal prints: weather data, invalid API key test, hottest/coldest city
+
+Part D – National Weather Service (NWS)
+
+Description:
+
+Fetches forecast data from the NWS API for a given location.
+
+Requires a custom User-Agent header in all requests.
+
+Saves the forecast as nws_forecast.json.
+
+Demonstrates what happens if the User-Agent header is missing.
+
+Outputs:
+
+JSON: nws_forecast.json
+
+Terminal prints: forecast URL, missing User-Agent test (status code + snippet)
