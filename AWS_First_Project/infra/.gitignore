@@ -1,0 +1,21 @@
+/main.tf 
+/terraform
+infra/.terraform/
+infra/.terraform/providers/registry.terraform.io/hashicorp/aws/6.8.0/darwin_arm64/terraform-provider-aws_v6.8.0_x5
+# Terraform cache and state files
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Env files
+.env
+venv/
+.envrc
+
+# Others you might want to ignore
+*.tfplan
