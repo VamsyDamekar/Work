@@ -23,17 +23,8 @@ MySQL, scrapes them via Prometheus, and visualizes them in Grafana dashboards. T
 configuration files for both Prometheus and Grafana.
 
 Architecture
-MySQL Database
-       |
-       v
-mysqld_exporter --> Prometheus --> Grafana
-       |               |
-       |               v
-       |          Metric Storage
-       v
-  Metrics Collection
-
-
+MySQL Database --> mysqld_exporter --> Prometheus --> Grafana
+      
 mysqld_exporter: Connects to MySQL and exposes metrics over HTTP.
 
 Prometheus: Scrapes metrics from mysqld_exporter at configured intervals and stores them in its time-series database.
