@@ -1,0 +1,10 @@
+# Ignore sensitive files
+mysql/my.cnf
+
+# Ignore compiled binaries
+*.exe
+*.out
+*.log
+
+# OS generated files
+.DS_Store
