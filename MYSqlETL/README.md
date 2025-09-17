@@ -77,4 +77,3 @@ Automated ETL execution via Jenkins with version-controlled scripts.
 
 Fully reproducible pipeline that maintains up-to-date datasets without manual intervention.
 
-If you want, I can combine all three projects (serverless GitOps pipeline, Kaggle S3 pipeline, and MySQL-to-S3 ETL) into one professional README with sections for each project, so your repository looks polished and portfolio-ready.
