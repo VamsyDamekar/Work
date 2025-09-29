@@ -1,0 +1,3 @@
+order_id,user_id,product_name,amount,status,order_date
+7,10,Headphones,150.00,processing,2025-09-19 15:24:28
+8,11,Monitor,220.00,shipped,2025-09-19 15:24:28
