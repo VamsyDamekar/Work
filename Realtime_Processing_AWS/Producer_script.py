@@ -9,7 +9,7 @@ import boto3
 # -----------------------------
 STREAM_NAME = "weather-stream"
 REGION = "us-east-2"  # must match the Kinesis stream region
-API_KEY = "190e638d62a5649d8043e869dcbf4fa1"  # replace with your key
+API_KEY = "******"  # replace with your key
 LAT = "40.71"
 LON = "-74.01"
 
