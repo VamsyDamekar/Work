@@ -12,7 +12,7 @@ from datetime import datetime, timedelta , timezone
 DB_HOST = "127.0.0.1"
 DB_NAME = "test_db"
 DB_USER = "root"
-DB_PASS = "Vamsree@0119"
+DB_PASS = "8888"
 DB_PORT = 3306   # 3306 if MySQL           # default MySQL port
 
 # -----------------------------
